@@ -83,3 +83,68 @@
 .autora {
     padding-top: .5em;
 }
+
+@media screen and (min-width: 1024px) {
+    .carrossel__titulo {
+        font-size: 24px;
+        padding: 2em 0 0.90em 0;
+    }
+
+    .swiper {
+        width: 60%;
+    }
+
+    .swiper-pagination {
+        margin: 2em 0 2.5em 0 ;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        display: block;
+        top: 65%;
+    }
+
+    .swiper-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+    }
+
+    .card {
+        width: 40%;
+        margin: 2em auto;
+    }
+
+    .card__descricao__texto {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .carrossel__container {
+        display: flex;
+        margin: 0 20vw 3em 20vw;
+    }
+    
+    .swiper-pagination {
+        margin: 1em;
+    }
+
+    .swiper {
+        width: 50%;
+    }
+
+    .card {
+       
+        width:60%;
+        margin-left: 4em;
+    }
+
+    .card__descricao__titulo-livro {
+        font-size: 32px;
+        width: 90%;
+    }
+
+    .card__descricao__titulo {
+        font-size: 18px;
+    }
+}

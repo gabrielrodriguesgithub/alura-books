@@ -14,6 +14,14 @@
     align-items: center;
 }
 
+.container__botao:checked~.container__rotulo>.cabecalho__menu-hamburguer{
+    background-image: url(../assets/menuazul.svg);
+}
+
+.container__botao:checked~.container__rotulo {
+    background: var(--azul-degrade);
+}
+
 .container {
     display: flex;
     align-items: center;
@@ -63,6 +71,107 @@
    
 }
 
-.container__botao {
+.opcoes, .container__botao, .container__titulo, .container__menu, .container__texto {
     display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho {
+        padding: 0 3em;
+    }
+    .container__titulo {
+        display: block;
+        font-family: var(--fonte-titulo);
+        font-size: 30px;
+        font-weight: 400;
+        padding-top: .2em;
+    }
+    .container__titulo-negrito {
+        font-weight: 700;
+    }
+    .cabecalho__menu-hamburguer {
+        display: none;
+    }
+    .favoritos {
+        display: none;
+    }
+    .container__menu {
+        display: flex;
+    }
+    .opcoes {
+       
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+    }
+    .opcoes__item {
+        padding: 0 .7em;
+     
+    }
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .opcoes__botao{
+        display: none;
+    }
+    
+    .opcoes__botao:checked~.lista__menu {
+        display: block;
+    }
+   
+    .lista__menu {
+        top: 9.5%;
+        width: 20%;
+    }
+
+    .opcoes__botao:checked~.opcoes__rotulo>.opcoes__item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .opcoes__item {
+        padding: 2em 1em;
+    }
+
+    .lista__menu__item:hover {
+        background: var(--azul-degrade);
+       
+    }
+
+    .lista__menu__item:hover>.lista__menu__links {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+
+
+}
+
+@media screen and (min-width:1728px) {
+    .container__imagem {
+        display: flex;
+        color: var(--preto);
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .container__texto {
+        margin: .4em;
+        display: block;
+    }
+
+    .favoritos , .cabecalho__menu-hamburguer {
+        display: none;
+    }
+
+    .opcoes {
+        margin-right: 40em;
+    }
+
+    .lista__menu {
+        top: 8.6%;
+    }
+    
+    
 }
